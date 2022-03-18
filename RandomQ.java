@@ -35,6 +35,7 @@ public class RandomQ {
      * 77-1
      * 232-error
      * 97-0
+     * 107-1
      * @param args
      */
     public static void main(String[] args) {
@@ -44,7 +45,7 @@ public class RandomQ {
                 862, 209, 4, 410, 496, 503, 739, 316, 42, 84, 239, 862, 1425, 146, 460, 225, 232, 155, 772, 273, 20, 32, 22, 912);
         Set<Integer> listNode = Set.of(206, 92, 25, 2, 23, 142, 287, 203, 82, 83, 138, 160, 234);
         Set<Integer> done = Set.of(20, 5, 155, 209, 78, 450, 127, 128, 96, 235, 992, 144, 739, 145, 384, 18, 300, 503, 106, 270, 76,
-                315, 124, 273, 77, 97);
+                315, 124, 273, 77, 97, 107);
         Random random = new Random();
         int r = 0;
         int f = 0;
