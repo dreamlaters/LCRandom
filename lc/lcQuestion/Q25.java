@@ -26,9 +26,8 @@ public class Q25 {
     }
 
     private static ListNode[] reverse(ListNode cur, ListNode head) {
-        ListNode res=new ListNode();
-        res.next=cur;
-        ListNode pre=res;
+        ListNode pre=new ListNode();
+        pre.next=cur;
         ListNode next=null;
         while(cur.next!=head){
             next=cur.next;
@@ -36,7 +35,7 @@ public class Q25 {
             next.next=pre.next;
             pre.next=next;
         }
-        return new ListNode[]{res.next,cur};
+        return new ListNode[]{pre.next,cur};
     }
 
 }
