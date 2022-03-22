@@ -1,4 +1,4 @@
-package lc.baseDataStructure;
+package lc.basicDataStructure;
 
 public class ListNode {
     public int val;

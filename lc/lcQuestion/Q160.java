@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.ListNode;
+import lc.basicDataStructure.ListNode;
 
 public class Q160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

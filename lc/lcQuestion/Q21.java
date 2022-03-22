@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.ListNode;
+import lc.basicDataStructure.ListNode;
 
 public class Q21 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

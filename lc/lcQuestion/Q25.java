@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.ListNode;
+import lc.basicDataStructure.ListNode;
 
 public class Q25 {
     public static void main(String[] args) {

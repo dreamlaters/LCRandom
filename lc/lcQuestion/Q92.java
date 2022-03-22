@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.ListNode;
+import lc.basicDataStructure.ListNode;
 
 public class Q92 {
     public static ListNode reverseBetween(ListNode head, int left, int right) {

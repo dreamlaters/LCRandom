@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.TreeNode;
+import lc.basicDataStructure.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

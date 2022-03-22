@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.ListNode;
+import lc.basicDataStructure.ListNode;
 
 /**
  * Description:

@@ -1,6 +1,6 @@
 package lc.lcQuestion;
 
-import lc.baseDataStructure.TreeNode;
+import lc.basicDataStructure.TreeNode;
 
 public class Q124 {
     int r=-1000;
