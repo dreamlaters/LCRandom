@@ -79,7 +79,7 @@ public class RandomQ {
      * 105-0
      * 560-0
      * 39-1
-     * 
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -96,6 +96,7 @@ public class RandomQ {
         Random random = new Random();
         int r = 0;
         int f = 0;
+        //来个水塘抽样
         for (int i = 0; i < all.size(); i++) {
             Integer v = all.get(i);
             if (!done.contains(v) && !errorList.contains(v)) {
