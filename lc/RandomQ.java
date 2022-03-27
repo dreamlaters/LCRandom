@@ -1,5 +1,7 @@
 package lc;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -79,6 +81,12 @@ public class RandomQ {
      * 105-0
      * 560-0
      * 39-1
+     * 402-3
+     * 79-1
+     * 234-1
+     * 103-0
+     * 215-1
+     * 90-3
      *
      * @param args
      */
@@ -92,7 +100,8 @@ public class RandomQ {
         Set<Integer> errorList = Set.of(1425, 28, 4, 41, 743);
         Set<Integer> done = Set.of(20, 5, 155, 209, 78, 450, 127, 128, 96, 235, 992, 144, 739, 145, 384, 18, 300, 503, 106, 270, 76,
                 315, 124, 273, 77, 97, 107, 862, 428, 974, 426, 94, 42, 91, 47, 84, 98, 48, 33, 95, 56, 206, 92, 25, 2, 21, 23, 257,
-                160, 316, 32, 146, 460, 142, 148, 305, 225, 232, 516, 22, 253, 912, 208, 207, 236, 200, 105, 560, 39, 83);
+                160, 316, 32, 146, 460, 142, 148, 305, 225, 232, 516, 22, 253, 912, 208, 207, 236, 200, 105, 560, 39, 83, 402, 79,
+                234, 103, 215, 90);
         Random random = new Random();
         int r = 0;
         int f = 0;
@@ -107,8 +116,10 @@ public class RandomQ {
                 }
             }
         }
+        BigDecimal donePercent = BigDecimal.valueOf(100.0 * done.size() / all.size()).setScale(2, RoundingMode.HALF_DOWN);
         System.out.println("共计" + all.size() + "题");
         System.out.println("已完成" + done.size() + "题");
+        System.out.println("已完成" + donePercent + "%的题");
         System.out.println(r);
     }
 }
