@@ -124,6 +124,7 @@ public class RandomQ {
      * 16-1
      * 109-3
      * 322-1
+     * 198-2
      *
      * @param args
      */
@@ -147,7 +148,6 @@ public class RandomQ {
         for (int i = 0; i < all.size(); i++) {
             Integer v = all.get(i);
             if (!done.contains(v) && !errorList.contains(v)) {
-                System.out.println(v);
                 int ran = random.nextInt(++f);
                 if (ran == 0) {
                     r = v;
