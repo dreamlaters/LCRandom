@@ -3,31 +3,26 @@ package lc.lcQuestion;
 import lc.basicDataStructure.ListNode;
 
 public class Q25 {
-    public static void main(String[] args) {
-        reverseKGroup(new ListNode(1,new ListNode(2,null)),2);
-    }
-    public static ListNode reverseKGroup(ListNode head, int k) {
-        ListNode res=new ListNode();
-        res.next=head;
-        ListNode pre=res;
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode r=new ListNode(0,head);
+        ListNode pre=r;
         while(head!=null){
             ListNode cur=head;
             for (int i = 0; i < k; i++) {
                 if(head==null){
-                    return res.next;
+                    return r.next;
                 }
                 head=head.next;
             }
             ListNode[] headAndTail=reverse(cur,head);
             pre.next=headAndTail[0];
+            headAndTail[1].next=head;
             pre=headAndTail[1];
         }
-        return res.next;
+        return r.next;
     }
-
-    private static ListNode[] reverse(ListNode cur, ListNode head) {
-        ListNode pre=new ListNode();
-        pre.next=cur;
+    private ListNode[] reverse(ListNode cur, ListNode head) {
+        ListNode pre=new ListNode(0,cur);
         ListNode next=null;
         while(cur.next!=head){
             next=cur.next;
@@ -37,5 +32,4 @@ public class Q25 {
         }
         return new ListNode[]{pre.next,cur};
     }
-
 }

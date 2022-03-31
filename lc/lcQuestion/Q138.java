@@ -23,17 +23,16 @@ public class Q138 {
     }
 
     public Node copyRandomList(Node head) {
-        Map<Node, Node> map = new HashMap<>();
-        Node headC = head;
-        while (headC != null) {
-            map.put(headC, new Node(headC.val));
-            headC = headC.next;
+        Map<Node,Node> map=new HashMap<>();
+        Node copy=head;
+        while (copy != null) {
+            map.put(copy,new Node(copy.val));
+            copy=copy.next;
         }
-        headC = head;
-        while (headC != null) {
-            map.get(headC).next = map.get(headC.next);
-            map.get(headC).random = map.get(headC.random);
-            headC = headC.next;
+        copy=head;
+        while(copy!=null){
+            map.get(copy).next=map.get(copy.next);
+            map.get(copy).random=map.get(copy.random);
         }
         return map.get(head);
     }
