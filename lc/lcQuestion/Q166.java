@@ -15,11 +15,7 @@ public class Q166 {
     private String fractionToDecimal(long b, long c) {
         StringBuilder stringBuilder = new StringBuilder();
         HashMap<Long, Integer> map = new HashMap<>();
-        if (b >= c) {
-            stringBuilder.append(b / c);
-        } else {
-            stringBuilder.append('0');
-        }
+        stringBuilder.append(b / c);
         long ys = b % c;
         if (ys == 0) {
             return stringBuilder.toString();
@@ -29,11 +25,7 @@ public class Q166 {
         do {
             map.put(ys, i++);
             ys *= 10;
-            if (ys >= c) {
-                stringBuilder.append(ys / c);
-            } else {
-                stringBuilder.append('0');
-            }
+            stringBuilder.append(ys / c);
             ys = ys % c;
             if (ys == 0) {
                 break;
