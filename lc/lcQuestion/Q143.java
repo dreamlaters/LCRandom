@@ -17,47 +17,41 @@ public class Q143 {
             return;
         }
         ListNode mid=getMid(head);
-        ListNode a=head;
-        ListNode b=mid.next;
+        ListNode right=mid.next;
         mid.next=null;
-        b=reverse(b);
-        merge(a,b);
+        ListNode reverse=reverse(right);
+        merge(head,reverse);
     }
-
-    private static ListNode reverse(ListNode b) {
+    private static ListNode getMid(ListNode head){
+        ListNode fast=head;
+        ListNode slow=head;
+        while(fast.next!=null && fast.next.next!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+        }
+        return slow;
+    }
+    private static ListNode reverse(ListNode head){
         ListNode pre=null;
         ListNode next=null;
-        while (b != null) {
-            next=b.next;
-            b.next=pre;
-            pre=b;
-            b=next;
+        while(head!=null){
+            next=head.next;
+            head.next=pre;
+            pre=head;
+            head=next;
         }
         return pre;
     }
-
-    private static void merge(ListNode a, ListNode b) {
-        ListNode aa;
-        ListNode bb;
-        while (a != null) {
-            aa = a.next;
-            bb = b.next;
-
-            a.next = b;
-            a = aa;
-
-            b.next = a;
-            b = bb;
+    private static void merge(ListNode a,ListNode b){
+        ListNode aa=null;
+        ListNode bb=null;
+        while(a!=null && b!=null){
+            aa=a.next;
+            bb=b.next;
+            a.next=b;
+            b.next=aa;
+            a=aa;b=bb;
         }
-    }
-
-    private static ListNode getMid(ListNode head) {
-        ListNode slow=head,fast=head;
-        while (fast.next != null && fast.next.next != null) {
-            slow=slow.next;
-            fast=fast.next.next;
-        }
-        return slow;
     }
 
 }
